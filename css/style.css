@@ -10,9 +10,10 @@
     /* App color */
     --color-primary: var(--color-black);
     --color-primary-variant: var(--color-gray);
-    --color-accent: var(--color-blue);
+    --color-accent: var(--color-white);
     --color-accent-variant: var(--color-orange);
-    --color-text: var(--color-black);
+    --color-text: var(--color-white);
+    --color-background: var(--color-black);
 }
 
 * {
@@ -21,6 +22,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 h1,
@@ -49,4 +51,49 @@ button {
 
 button:focus{
     outline: 1px solid var(--color-accent);
+}
+
+/* Header */
+.header {
+    position: fixed;
+    position: top;
+    background-color: var(--color-background); /* FIXME */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__logo__img {
+    width: 36px;
+    height: 36px;
+}
+
+.header__logo__title {
+    font-size: 1.4rem;
+}
+
+.header__menu {
+    display: flex;
+    gap: 4px;
+}
+
+.header__menu__item {
+    padding: 8px 16px;
+}
+
+.header__menu__item:hover {
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu__item.active {
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
 }
