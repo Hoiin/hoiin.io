@@ -61,8 +61,13 @@ button:active {
 
 /* Common */
 .section {
-    padding: 4rem;
-    text-align: center;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .title {
     font-size: 2.5rem;
@@ -78,8 +83,9 @@ button:active {
 }
 .description {
     font-size: 1.5rem;
-    margin: 1rem 0rem;
+    margin: 1rem 2rem;
     font-weight: lighter;
+    text-align: center;
 }
 .max-container {
     max-width: var(--size-max-width);
@@ -135,16 +141,6 @@ button:active {
 }
 
 /* Home */
-#home {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    padding-top: 5rem;
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .home__profile {
     display: flex;
     flex-direction: column;
@@ -180,7 +176,7 @@ button:active {
 
 .home__introduction__contact {
     padding: 0.5rem 1rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: lighter;
     border: 0.5px solid var(--color-primary);
     border-radius: 4px;
@@ -188,16 +184,6 @@ button:active {
 }
 
 /* About */
-#about {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    padding-top: 5rem;
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .about__title {
     font-size: 2rem;
     font-weight: lighter;
@@ -211,6 +197,7 @@ button:active {
     justify-content: space-between;
     gap: 1rem;
     margin: 2.5rem 0rem;
+    text-align: center;
 }
 .major {
     width: 70%;
@@ -273,21 +260,14 @@ button:active {
     height: 100%;
 }
 .job__blux__img {
-    width: 70%;
-    height: 100%;
-    margin-left: 1rem;
+    width: 130%;
+    height: 60%;
+    margin-top : 0.5rem;
+    margin-right: 1rem;
+    padding-right: 0.5rem;
 }
 
 /* Skills */
-#skills {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    padding-top: 5rem;
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .skills__title {
     color : var(--color-accent);
@@ -303,6 +283,7 @@ button:active {
     border-radius: 8px;
     overflow: hidden;
     margin: 1rem;
+    text-align: center;
 }
 
 .skills__programming {
@@ -340,18 +321,8 @@ button:active {
 }
 
 /* Works */
-#works {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    padding-top: 5rem;
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .models_intro {
-    width: 45%;
+    width: 80%;
     display: flex;
     justify-content: center;
     margin: 1rem 2rem;
@@ -362,6 +333,7 @@ button:active {
     color: var(--color-primary-variant);
     font-size: 1.1rem;
     font-weight: lighter;
+    text-align: center;
     padding: 0.5rem 2.5rem;
     cursor: pointer;
 }
@@ -386,6 +358,9 @@ button:active {
 }
 .model {
     width: 70%;
+}
+.model__list{
+    text-align: center;
 }
 .model__metadata {
     display: flex;
@@ -418,15 +393,6 @@ button:active {
 }
 
 /* Footer */
-#contact {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .contact__channels {
     display: flex;
@@ -440,4 +406,78 @@ button:active {
 }
 .contact__channel:hover {
     color: var(--color-accent);
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        background-color: var(--color-background);
+        color: var(--color-text);
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .description {
+        font-size: 1.4rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: start;
+    }
+    .header__menu {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 4rem;
+        gap: 1rem;
+    }
+    .header__nav {
+        width: 100%;
+    }
+
+    .home__profile__title {
+        font-size: 1.8rem;
+    }
+    .home__introduction__description {
+        font-size: 1.4rem;
+    }
+
+    .about__title {
+        font-size: 1.8rem;
+    }
+    .majors {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+    .major__icon {
+        text-align: center;
+    }
+    .jobs {
+        flex-direction: column;
+    }
+    .job__blux__img {
+        width: 150%;
+        height: 60%;
+        padding-right: 1.4rem;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .models_intro {
+        display: grid;
+        width: 70%;
+        height: 70%;
+        grid-template-columns: 5fr 5fr;
+        margin: 1rem 2rem;
+        gap: 1rem;
+        border-bottom: none;
+    }
 }

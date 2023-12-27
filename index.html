@@ -34,7 +34,7 @@
             <img class="header__logo__img" src="./images/profile_icon.ico" alt="logo">
             <h1><a class="header__logo__title" href="#">Hoiin</a></h1>
         </div>
-        <nav>
+        <nav class="header__nav">
             <ul class="header__menu">
                 <li><a class="header__menu__item active" href="#home">Home</a></li>
                 <li><a class="header__menu__item" href="#about">About</a></li>
@@ -47,7 +47,7 @@
     <!-- Main -->
     <main>
         <!-- Introduction -->
-        <section id="home">
+        <section id="home" class="section">
             <span class="home__profile">
                 <h2 class="home__profile__title">Make practical and powerful Ai</h2>
                 <img class="home__profile__img" src="./images/profile.jpg" alt="profile picture">
@@ -192,10 +192,10 @@
         <section id="works" class="section">
             <h2 class="title">Works</h2>
             <ul class="models_intro">
-                <li><button class="model_button active">HEIST</button></li>
-                <li><button class="model_button">RiDAR</button></li>
-                <li><button class="model_button">CaseQ</button></li>
-                <li><button class="model_button">SASQN</button></li>
+                <li class="model__list"><button class="model_button active">HEIST</button></li>
+                <li class="model__list"><button class="model_button">RiDAR</button></li>
+                <li class="model__list"><button class="model_button">CaseQ</button></li>
+                <li class="model__list"><button class="model_button">SASQN</button></li>
             </ul>
             <ul class="models">
                 <li class="model">
@@ -247,10 +247,10 @@
                     <div class="model__metadata">
                         <p class="model__description">
                             <strong class="model__title">SASQN </strong>
-                            combines <strong class="model__title">seqential recommendation an Q-learning
-                            to fine-tune the effect of user feedback</strong>.
+                            combines <strong class="model__title">sequential recommendation an Q-learning
+                            to fine-tune the effects of user feedback</strong>.
                             By using Q-learning, modeler can model user's implicit feedback(click, like or purchase, etc.) with reward function 
-                            and the objective function of model can be modified to the user's long term satifaction (cumulative rewards).
+                            and the objective function of model is modified to the user's long term satifaction (cumulative rewards).
                             SASQN <strong class="model__title">uses reward as prompt </strong> 
                             to alleviate the instability of learning that comes from the absence of neagative feedback 
                             and also <strong class="model__title">controls the exploration by adjusting prompt rewards.</strong>
@@ -270,11 +270,11 @@
         </aside>
     </main>
     <!-- Footer -->
-    <footer id="contact">
+    <footer id="contact" class="section">
         <!-- Contact -->
         <div>
             <h2 class="title">Contact me!</h2>
-            <p class="description">hine8648@gmail.com / Simon@zaikorea.org</p>
+            <p class="description">hine8648@gmail.com / simon@zaikorea.org</p>
             <ul class="contact__channels">
                 <li>
                     <a class="contact__channel"
