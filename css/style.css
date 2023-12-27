@@ -14,6 +14,9 @@
     --color-accent-variant: var(--color-orange);
     --color-text: var(--color-white);
     --color-background: var(--color-black);
+
+    /* Size */
+    --size-max-width: 1200px
 }
 
 * {
@@ -51,6 +54,27 @@ button {
 
 button:focus{
     outline: 1px solid var(--color-primary);
+}
+
+/* Common */
+.section {
+    padding: 4rem;
+    text-align: center;
+}
+.title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--color-accent);
+    margin: 1rem 0rem;
+}
+.description {
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+    font-weight: lighter;
+}
+.max-container {
+    max-width: var(--size-max-width);
+    margin: auto;
 }
 
 /* Header */
@@ -125,7 +149,7 @@ button:focus{
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 1px solid var(--color-primary);
+    border: 3px solid var(--color-primary);
     border-radius: 80%;
     margin: 5%;
 }
@@ -148,7 +172,95 @@ button:focus{
     padding: 0.5rem 1rem;
     font-size: 0.7rem;
     font-weight: lighter;
-    border: 1px solid var(--color-primary);
+    border: 0.5px solid var(--color-primary);
     border-radius: 4px;
     margin: 1rem 1rem;
+}
+
+/* About */
+#about {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__title {
+    font-size: 2rem;
+    font-weight: lighter;
+    color: var(--color-accent);
+    margin-top: 2rem;
+}
+
+.majors {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2.5rem 0rem;
+}
+.major {
+    width: 40%;
+    background-color: var(--color-primary-variant);
+    padding: 2rem 1rem;
+    color : var(--color-text);
+    border-radius: 1rem;
+    cursor: default;
+}
+.major__title {
+    height: 25%;
+}
+.major__description {
+    font-weight: lighter;
+}
+.major__icon {
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: var(--color-accent);
+    transition: all 300ms ease;
+}
+.major:hover .major__icon{
+    transform: scale(1.2);
+}
+.major:hover {
+    box-shadow: var(--color-accent) 0px 0px 6px;
+}
+.major__title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+
+.jobs {
+    text-align : start;
+    margin-top: 1rem;
+}
+.job {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 1rem;
+}
+.job__img {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+}
+.job__name {
+    font-weight: normal;
+}
+.job__description {
+    font-weight: lighter;
+}
+.job__education__img {
+    width: 50px;
+    height: 50px;
+}
+.job__blux__img {
+    width: 35px;
+    height: 50px;
+    transform: translateX(8px);
 }
