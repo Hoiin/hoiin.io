@@ -3,14 +3,14 @@
     /* Colors */
     --color-white: #ffffff;
     --color-black: #050a13;
-    --color-blue: #4741f4;
+    --color-blue: #706cf1;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
 
     /* App color */
-    --color-primary: var(--color-black);
+    --color-primary: var(--color-white);
     --color-primary-variant: var(--color-gray);
-    --color-accent: var(--color-white);
+    --color-accent: var(--color-blue);
     --color-accent-variant: var(--color-orange);
     --color-text: var(--color-white);
     --color-background: var(--color-black);
@@ -50,7 +50,7 @@ button {
 }
 
 button:focus{
-    outline: 1px solid var(--color-accent);
+    outline: 1px solid var(--color-primary);
 }
 
 /* Header */
@@ -78,6 +78,7 @@ button:focus{
 
 .header__logo__title {
     font-size: 1.4rem;
+    font-weight: lighter;
 }
 
 .header__menu {
@@ -87,13 +88,67 @@ button:focus{
 
 .header__menu__item {
     padding: 8px 16px;
+    font-weight: lighter;
 }
 
 .header__menu__item:hover {
-    border-bottom: 1px solid var(--color-accent);
+    border-bottom: 1px solid var(--color-primary);
 }
 
 .header__menu__item.active {
-    border: 1px solid var(--color-accent);
+    border: 1px solid var(--color-primary);
     border-radius: 4px;
+}
+
+/* Home */
+#home {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__profile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+.home__profile__title {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.home__profile__img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid var(--color-primary);
+    border-radius: 80%;
+    margin: 5%;
+}
+
+.home__introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home__introduction__description {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-align: center;
+}
+.home__introduction__description--strong{
+    color: var(--color-accent);
+}
+
+.home__introduction__contact {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    font-weight: lighter;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    margin: 1rem 1rem;
 }
