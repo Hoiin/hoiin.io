@@ -67,10 +67,10 @@
             <h2 class="title">About me</h2>
             <p class="description">
             I am currently machine learning research engineer at Blux. <br>
-            I want to innovate buisness intelligence with machine learning.
+            I want to innovate buisness decision making process with machine learning.
             </p>
 
-            <p class="about__title">Research interests</p>
+            <p class="about__title">interests</p>
             <ul class="majors">
                 <li class="major">
                     <i class="fa-solid fa-circle-nodes major__icon"></i>
@@ -91,9 +91,12 @@
                     </p>
                 </li>
                 <li class="major">
-                    <i class="fa-solid fa-hand-holding-dollar major__icon"></i>
-                    <p class="major__title">Dynamic Pricing</p>
-                    <p class="major__description">Bayesian Persuation</p>
+                    <i class="fa-solid fa-code major__icon"></i>
+                    <p class="major__title">Development</p>
+                    <p class="major__description">
+                        Backend Engineering <br>
+                        MLOps
+                    </p>
                 </li>
             </ul>
 
@@ -125,62 +128,49 @@
         <!-- Skill Stack -->
         <section id="skills" class="section">
             <h2 class="title">Skills</h2>
-            <div>
-                <section>
-                    <h3>Programming Skills</h3>
+            <p class="description">
+                Enthusiastically learn new area and open to use new tools
+            </p>
+            <div class="skills-container">
+                <section class="skills__programming">
+                    <h3 class="skills__title">Programming Skills</h3>
                     <ul>
-                        <li>
-                            <div>
+                        <li class="bar">
+                            <div class="bar__metadata">
                                 <span>Python</span><span>80%</span>
                             </div>
-                            <div>
-                                <div style="width: 80%"></div>
+                            <div class="bar__bg">
+                                <div class="bar__value" style="width: 80%"></div>
                             </div>
                         </li>
-                        <li>
-                            <div>
+                        <li class="bar">
+                            <div class="bar__metadata">
                                 <span>Tensorflow</span><span>75%</span>
                             </div>
-                            <div>
-                                <div style="width: 70%"></div>
+                            <div class="bar__bg">
+                                <div class="bar__value" style="width: 70%"></div>
                             </div>
                         </li>
-                        <li>
-                            <div>
+                        <li class="bar">
+                            <div class="bar__metadata">
                                 <span>NodeJS</span><span>30%</span>
                             </div>
-                            <div>
-                                <div style="width: 30%"></div>
+                            <div class="bar__bg">
+                                <div class="bar__value" style="width: 30%"></div>
                             </div>
                         </li>
-                        <li>
-                            <div>
-                                <span>FastAPI</span><span>30%</span>
-                            </div>
-                            <div>
-                                <div style="width: 30%"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
+                        <li class="bar">
+                            <div class="bar__metadata">
                                 <span>Pytorch</span><span>30%</span>
                             </div>
-                            <div>
-                                <div style="width: 30%"></div>
+                            <div class="bar__bg">
+                                <div class="bar__value" style="width: 30%"></div>
                             </div>
                         </li>
                     </ul>
                 </section>
-                <section>
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>Slack</li>
-                        <li>Figma</li> 
-                    </ul>
-                </section>
-                <section>
-                    <h3>Etc</h3>
+                <section class="skills__academic">
+                    <h3 class="skills__title">Academic Study</h3>
                     <ul>
                         <li>Linear Algebra</li>
                         <li>Mathematical Statistics</li>
@@ -188,16 +178,24 @@
                         <li>Calculus</li>
                     </ul>
                 </section>
+                <section class="skills__tools">
+                    <h3 class="skills__title">Tools</h3>
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>Slack</li>
+                        <li>Figma</li> 
+                    </ul>
+                </section>
             </div>
         </section>
         <!-- Works -->
         <section id="works" class="section">
             <h2 class="title">Works</h2>
-            <ul>
-                <li><button>HEIST</button></li>
-                <li><button>RiDAR</button></li>
-                <li><button>CaseQ</button></li>
-                <li><button>SASQN</button></li>
+            <ul class="models">
+                <li><button class="model active">HEIST</button></li>
+                <li><button class="model">RiDAR</button></li>
+                <li><button class="model">CaseQ</button></li>
+                <li><button class="model">SASQN</button></li>
             </ul>
             <p>HEIST Description</p>
             <p>RiDAR Description</p>
