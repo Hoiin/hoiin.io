@@ -1,7 +1,4 @@
 'use strict';
-// Page 시작하자마자
-const defaultActiveWorkButton = document.getElementsByClassName('.model_button.model--selected');
-console.log(defaultActiveWorkButton[0]);
 
 // Header에 페이지 아래로 스크롤 시 다크 스타일링 적용
 const header = document.querySelector('.header');

@@ -1,6 +1,6 @@
 'use strict';
 
-// Show default model description 
+// 1. Show default model description 
 const selectedModels = document.querySelectorAll('.model');
 for (let i = 0; i < selectedModels.length; i++) {
     if (i !== 0) {
@@ -8,21 +8,18 @@ for (let i = 0; i < selectedModels.length; i++) {
     } 
 }
 
-// Works Filtering
+// 2. Works Filtering
 const modelsIntro = document.querySelector('.models_intro');
-const modelList = document.querySelector('.models');
-modelsIntro.addEventListener('click', (event) => {
-    const filter = event.target.dataset.model;
-    if (filter == null) {
-        return;
-    }
+handleActiveSelection(modelsIntro);
 
-    // Active button 
+
+// Util Functions
+function activateModelButtion(event) {
     const selected = document.querySelector('.model--selected');
     selected.classList.remove('model--selected');
     event.target.classList.add('model--selected');
-
-    // Filtering
+}
+function filterWhichModelToShow(selectedModels, filter) {
     selectedModels.forEach((model) => {
         if (filter == model.dataset.type) {
             model.style.display = 'block';
@@ -30,4 +27,18 @@ modelsIntro.addEventListener('click', (event) => {
             model.style.display = 'none';
         }
     }); 
-});
+}
+function handleActiveSelection(unsortedList) {
+    unsortedList.addEventListener('click', (event) => {
+        const filter = event.target.dataset.model;
+        if (filter == null) {
+            return;
+        }
+    
+        // Active button 
+        activateModelButtion(event);
+    
+        // Filtering
+        filterWhichModelToShow(selectedModels, filter);
+    });
+}
