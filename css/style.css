@@ -134,6 +134,7 @@ button:active {
 .header__menu__item {
     padding: 8px 16px;
     font-weight: lighter;
+    border-bottom: 0.5px transparent;
 }
 
 .header__menu__item:hover {
@@ -142,6 +143,16 @@ button:active {
 
 .header__menu__item.active {
     border-bottom: 0.5px solid var(--color-primary);
+}
+
+.header__toggle {
+    display: none;
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    cursor: pointer;
 }
 
 /* Home */
@@ -349,7 +360,7 @@ button:active {
     cursor: pointer;
     border-bottom: 0.5px solid var(--color-primary);
 }
-.model_button.active {
+.model_button.model--selected {
     color: var(--color-primary);
     border-bottom: 0.5px solid var(--color-primary);
 }
@@ -359,9 +370,11 @@ button:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 300ms ease-out;
 }
 .model {
     width: 70%;
+    transition: all 300ms linear;
 }
 .model__list{
     text-align: center;
@@ -441,13 +454,24 @@ button:active {
         align-items: start;
     }
     .header__menu {
+        display: none;
         flex-direction: column;
         text-align: center;
         padding: 1rem 4rem;
         gap: 1rem;
     }
+    .header__menu__item {
+        display: block;
+    }
+    .header__menu.open {
+        display: flex;
+        background-color: var(--color-background);
+    }
     .header__nav {
         width: 100%;
+    }
+    .header__toggle {
+        display: block;
     }
 
     .home__profile__title {
