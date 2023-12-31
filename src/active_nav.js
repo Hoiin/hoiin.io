@@ -27,10 +27,8 @@ const observer = new IntersectionObserver((entries) => {
             visibleItemIdx === lastIdx && 
             isVisible[lastIdx] && 
             entry.intersectionRatio >= 0.9;
-        console.log(entry.intersectionRatio);
     })
 
-    console.log(isVisible);
     const navIndex = 
         selectLastOne 
         ? sectionIds.length - 1 
