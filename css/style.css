@@ -160,6 +160,9 @@ button:active {
 }
 
 /* Home */
+.home__container {
+    margin: 0rem 2rem;
+}
 .home__profile {
     display: flex;
     flex-direction: column;
@@ -169,6 +172,7 @@ button:active {
 .home__profile__title {
     font-size: 2rem;
     font-weight: lighter;
+    text-align: center;
 }
 .home__profile__img {
     width: 150px;
